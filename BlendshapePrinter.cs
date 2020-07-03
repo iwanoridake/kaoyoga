@@ -8,6 +8,7 @@ public class BlendshapePrinter : MonoBehaviour
 
 	bool shapeEnabled = false;
 	Dictionary<string, float> currentBlendShapes;
+	bool hugugao = false;
 
 	// Use this for initialization
 	void Start()
@@ -15,6 +16,7 @@ public class BlendshapePrinter : MonoBehaviour
 		UnityARSessionNativeInterface.ARFaceAnchorAddedEvent += FaceAdded;
 		UnityARSessionNativeInterface.ARFaceAnchorUpdatedEvent += FaceUpdated;
 		UnityARSessionNativeInterface.ARFaceAnchorRemovedEvent += FaceRemoved;
+		
 
 	}
 
@@ -26,7 +28,7 @@ public class BlendshapePrinter : MonoBehaviour
 			string blendshapes = "";
 			string shapeNames = "";
 			string valueNames = "";
-			/*foreach (KeyValuePair<string, float> kvp in currentBlendShapes)
+			foreach (KeyValuePair<string, float> kvp in currentBlendShapes)
 			{
 				blendshapes += " [";
 				blendshapes += kvp.Key.ToString();
@@ -38,17 +40,22 @@ public class BlendshapePrinter : MonoBehaviour
 				shapeNames += "\",\n";
 				valueNames += kvp.Value.ToString();
 				valueNames += "\n";
-			}*/
-
-
-
-			if (currentBlendShapes["cheekPuff"] >= 0.2)
-			{
-				blendshapes += "5秒キープ！";
 			}
 
+
+
+			/*if (hugugao)
+			{
+				blendshapes = "5秒キープ！";
+            }
+            else
+            {
+				blendshapes = "ほうれい線を伸ばすように\n" + "口に空気を含みましょう";
+
+            }*/
+
 			//GUI.skin.box.fontSize = 22;
-			GUI.skin.box.fontSize = 50;
+			GUI.skin.box.fontSize = 30;
 			GUILayout.BeginHorizontal(GUILayout.ExpandHeight(true));
 			GUILayout.Box(blendshapes);
 			//GUILayout.Box(keep);
@@ -83,6 +90,7 @@ public class BlendshapePrinter : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		
 
 	}
 }

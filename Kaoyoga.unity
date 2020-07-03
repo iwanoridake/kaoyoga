@@ -324,6 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 539730393}
   - component: {fileID: 539730394}
+  - component: {fileID: 539730395}
   m_Layer: 0
   m_Name: BlendshapeOutput
   m_TagString: Untagged
@@ -352,9 +353,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539730392}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6438cd254de46d9aab501d3d1660b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &539730395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539730392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51271aee571cc4844ae45be8120635da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1121666029
